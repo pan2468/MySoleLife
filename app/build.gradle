@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.chaeseong.mysolelife"
-        minSdk 16
+        minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -48,4 +48,7 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:31.2.3')
     implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
 }
