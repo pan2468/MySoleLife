@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.chaeseong.mysolelife.R
 import com.chaeseong.mysolelife.databinding.ActivityLoginBinding
 import com.chaeseong.mysolelife.databinding.FragmentHomeBinding
@@ -43,7 +44,23 @@ class HomeFragment : Fragment() {
 		binding.tipTap.setOnClickListener {
 
 			Log.d("HomeFragment","tiptap")
-			Toast.makeText(requireContext(),"Clicked",Toast.LENGTH_SHORT).show()
+			it.findNavController().navigate(R.id.action_homeFragment_to_tipFragment)
+
+		}
+
+		binding.talkTap.setOnClickListener {
+			it.findNavController().navigate(R.id.action_homeFragment_to_talkFragment)
+
+		}
+
+		binding.bookmarkTap.setOnClickListener {
+			it.findNavController().navigate(R.id.action_homeFragment_to_bookmarkFragment)
+
+		}
+
+		binding.storeTap.setOnClickListener {
+			it.findNavController().navigate(R.id.action_homeFragment_to_storeFragment)
+
 		}
 
 		return binding.root
