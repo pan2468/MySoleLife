@@ -1,5 +1,6 @@
 package com.chaeseong.mysolelife.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.chaeseong.mysolelife.R
+import com.chaeseong.mysolelife.contentsList.ContentListActivity
 import com.chaeseong.mysolelife.databinding.FragmentTipBinding
 
 
@@ -26,6 +28,12 @@ class TipFragment : Fragment() {
 	): View? {
 
 		binding = DataBindingUtil.inflate(inflater,R.layout.fragment_tip, container, false)
+
+		binding.category1.setOnClickListener {
+			val intent = Intent(context,ContentListActivity::class.java)
+			startActivity(intent)
+
+		}
 
 		binding.homeTap.setOnClickListener {
 			it.findNavController().navigate(R.id.action_tipFragment_to_homeFragment)
