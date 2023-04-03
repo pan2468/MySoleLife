@@ -3,6 +3,7 @@ package com.chaeseong.mysolelife.contentsList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.chaeseong.mysolelife.R
@@ -27,6 +28,8 @@ class ContentRvAdapter(val items: ArrayList<ContentModel>): RecyclerView.Adapter
 		fun bindItems(item: ContentModel){
 
 		val contentTitle = itemView.findViewById<TextView>(R.id.textArea)
+		val imageView = itemView.findViewById<ImageView>(R.id.imageArea)
+
 			contentTitle.text = item.title
 
 		}
