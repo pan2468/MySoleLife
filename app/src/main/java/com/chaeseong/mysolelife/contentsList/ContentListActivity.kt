@@ -21,7 +21,7 @@ class ContentListActivity : AppCompatActivity() {
 		items.add(ContentModel("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FznKK4%2Fbtq665AUWem%2FRUawPn5Wwb4cQ8BetEwN40%2Fimg.png","title2"))
 		items.add(ContentModel("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbtig9C%2Fbtq65UGxyWI%2FPRBIGUKJ4rjMkI7KTGrxtK%2Fimg.png","title3"))
 
-		val rvAdapter = ContentRvAdapter(items)
+		val rvAdapter = ContentRvAdapter(baseContext,items)
 		rv.adapter = rvAdapter
 
 		rv.layoutManager = GridLayoutManager(this, 2)
