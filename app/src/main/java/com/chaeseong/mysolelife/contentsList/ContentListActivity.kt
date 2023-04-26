@@ -35,7 +35,6 @@ class ContentListActivity : AppCompatActivity() {
 		val category = intent.getStringExtra("category")
 
 		if(category == "category1"){
-
 			myRef = database.getReference("contents")
 
 		}else if(category == "category2"){
@@ -67,16 +66,16 @@ class ContentListActivity : AppCompatActivity() {
 
 		rv.layoutManager = GridLayoutManager(this, 2)
 
-		rvAdapter.itemClick = object : ContentRvAdapter.ItemClick {
-			override fun onClick(view: View, position: Int) {
-				Toast.makeText(baseContext, items[position].title, Toast.LENGTH_SHORT).show();
-
-				val intent = Intent(this@ContentListActivity, ContentShowActivity::class.java)
-				intent.putExtra("url", items[position].webUrl);
-				startActivity(intent);
-			}
-
-		}
+//		rvAdapter.itemClick = object : ContentRvAdapter.ItemClick {
+//			override fun onClick(view: View, position: Int) {
+//				Toast.makeText(baseContext, items[position].title, Toast.LENGTH_SHORT).show();
+//
+//				val intent = Intent(this@ContentListActivity, ContentShowActivity::class.java)
+//				intent.putExtra("url", items[position].webUrl);
+//				startActivity(intent);
+//			}
+//
+//		}
 //		val myRef2 = database.getReference("contents2")
 //
 //		myRef2.push().setValue(
