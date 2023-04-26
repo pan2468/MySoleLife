@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.chaeseong.mysolelife.R
 
-class ContentRvAdapter(val context: Context, val items: ArrayList<ContentModel>): RecyclerView.Adapter<ContentRvAdapter.Viewholder>() {
+class ContentRvAdapter(val context: Context, val items: ArrayList<ContentModel>, val keyList: ArrayList<String>): RecyclerView.Adapter<ContentRvAdapter.Viewholder>() {
 
 //	interface ItemClick{
 //		fun onClick(view: View, position: Int)
@@ -55,7 +55,7 @@ class ContentRvAdapter(val context: Context, val items: ArrayList<ContentModel>)
 		val bookmarkArea = itemView.findViewById<ImageView>(R.id.bookmarkArea)
 
 			bookmarkArea.setOnClickListener {
-				Toast.makeText(context, "북마크가 클릭되었습니다.", Toast.LENGTH_LONG).show()
+				Toast.makeText(context, keyList.toString(), Toast.LENGTH_LONG).show()
 			}
 
 			contentTitle.text = item.title
